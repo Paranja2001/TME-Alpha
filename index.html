@@ -51,7 +51,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 720px;
       margin: 0 auto;
       padding: 40px 24px;
     }
@@ -60,100 +60,34 @@
       background: #15120e;
       border: 1px solid #221712;
       border-radius: 10px;
-      padding: 24px 28px;
-      margin-bottom: 40px;
+      padding: 28px;
+      margin-bottom: 28px;
     }
 
     .hero h2 {
       color: #b89a50;
-      font-size: 1.15rem;
-      margin-bottom: 8px;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
 
     .hero p {
       color: #72635a;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       line-height: 1.55;
-      margin-bottom: 18px;
-      max-width: 40rem;
+      margin-bottom: 22px;
     }
 
-    .hero-actions {
+    .meta {
       display: flex;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .section-title {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #72635a;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #221712;
-    }
-
-    .mod-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 50px;
-    }
-
-    .mod-card {
-      background: #15120e;
-      border: 1px solid #221712;
-      border-radius: 10px;
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .mod-card:hover {
-      border-color: #3a3228;
-      background: #1f1813;
-    }
-
-    .mod-icon {
-      width: 48px; height: 48px;
-      border-radius: 8px;
-      background: #1f1813;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
-      flex-shrink: 0;
-    }
-
-    .mod-info { flex: 1; min-width: 0; }
-
-    .mod-name {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #b89a50;
-      margin-bottom: 4px;
-    }
-
-    .mod-desc {
-      font-size: 0.82rem;
-      color: #72635a;
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-
-    .mod-meta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+      margin-bottom: 22px;
     }
 
     .tag {
       font-size: 0.7rem;
       font-weight: 500;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 4px;
       background: #1f1813;
       border: 1px solid #221712;
@@ -163,78 +97,88 @@
 
     .tag.mc { border-color: #2a4a20; color: #6aaa50; background: #101808; }
     .tag.loader { border-color: #20304a; color: #5090d0; background: #080f18; }
-    .tag.req { border-color: #4a3020; color: #c09050; background: #180e08; }
-    .tag.opt { border-color: #2a2a40; color: #9090b0; background: #101018; }
 
     .download-btn {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: #1f1813;
-      color: #b89a50;
-      border: 1px solid #452020;
-      border-radius: 7px;
-      padding: 9px 18px;
-      font-size: 0.85rem;
+      gap: 10px;
+      background: #2a2118;
+      color: #e8d5a3;
+      border: 1px solid #b89a50;
+      border-radius: 8px;
+      padding: 14px 22px;
+      font-size: 1rem;
       font-weight: 600;
-      cursor: pointer;
       text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
       transition: background 0.15s, border-color 0.15s, transform 0.1s;
     }
 
-    .download-btn.primary {
-      background: #2a2118;
-      border-color: #b89a50;
-      color: #e8d5a3;
-    }
-
     .download-btn:hover {
-      background: #2a2118;
-      border-color: #3a3228;
+      background: #322818;
+      border-color: #d4b86a;
       transform: translateY(-1px);
     }
 
-    .download-btn.primary:hover {
-      border-color: #d4b86a;
-      background: #322818;
-    }
-
-    .download-btn:active { transform: translateY(0); }
-
     .download-btn svg {
-      width: 15px; height: 15px;
+      width: 18px; height: 18px;
       stroke: currentColor; fill: none;
       stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #72635a;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #221712;
     }
 
     .steps {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-bottom: 50px;
+      gap: 10px;
+      margin-bottom: 28px;
     }
 
     .steps li {
       background: #15120e;
       border: 1px solid #221712;
       border-radius: 10px;
-      padding: 16px 20px;
-      font-size: 0.88rem;
+      padding: 14px 18px;
+      font-size: 0.9rem;
       line-height: 1.45;
       color: #72635a;
     }
 
     .steps strong { color: #b89a50; }
 
-    .server-box code {
+    .server {
+      background: #15120e;
+      border: 1px solid #221712;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 40px;
+    }
+
+    .server .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #72635a;
+      margin-bottom: 8px;
+    }
+
+    .server code {
       color: #e8d5a3;
+      font-size: 1.05rem;
       background: #1f1813;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      display: inline-block;
     }
 
     footer {
@@ -247,7 +191,6 @@
 
     @media (max-width: 640px) {
       header { padding: 20px; }
-      .mod-card { flex-wrap: wrap; }
       .download-btn { width: 100%; justify-content: center; }
     }
   </style>
@@ -258,164 +201,46 @@
   <div class="logo"><img src="https://raw.githubusercontent.com/Paranja2001/project-build/main/logo.png" alt="TME Logo"></div>
   <div>
     <h1>Tales of Middle-Earth</h1>
-    <p>Клиентский модпак · Alpha · Fabric 1.21.1</p>
+    <p>Клиентский модпак · Alpha</p>
   </div>
 </header>
 
 <div class="container">
 
   <div class="hero">
-    <h2>Сборка для входа на сервер</h2>
+    <h2>Скачать сборку</h2>
     <p>
-      Скачайте полный клиентский модпак или соберите папку <code style="color:#b89a50;">mods</code> по списку ниже.
-      Версия Minecraft — <strong style="color:#b0a48a;">1.21.1</strong>, загрузчик — <strong style="color:#b0a48a;">Fabric</strong>, Java 21.
+      Один архив со всеми модами для входа на сервер.
+      Распакуй содержимое в папку <strong style="color:#b0a48a;">mods</strong> профиля Fabric.
     </p>
-    <div class="hero-actions">
-      <!-- Положите zip в packs/ и поправьте имя файла -->
-      <a class="download-btn primary" href="packs/TME-Alpha-Client-1.21.1.zip" download>
-        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Скачать модпак (ZIP)
-      </a>
+    <div class="meta">
       <span class="tag mc">1.21.1</span>
       <span class="tag loader">Fabric</span>
+      <span class="tag">Java 21</span>
     </div>
+    <!-- Имя файла должно совпадать с тем, что положишь в репо -->
+    <a class="download-btn" href="TME-Alpha-Client.zip" download>
+      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Скачать модпак (ZIP)
+    </a>
   </div>
 
-  <div class="section-title">Как установить</div>
+  <div class="section-title">Установка</div>
   <ol class="steps">
-    <li><strong>1.</strong> Установите Minecraft <strong>1.21.1</strong> и Fabric Loader (или Prism / HMCL с профилем Fabric).</li>
-    <li><strong>2.</strong> Распакуйте ZIP в папку <strong>mods</strong> профиля (или скопируйте jar из списка).</li>
-    <li><strong>3.</strong> Не ставьте на клиент EasyAuth / Grim — только на сервер.</li>
-    <li><strong>4.</strong> Зайдите на сервер: <span class="server-box"><code><!-- ваш буквенный IP -->play.example.wellduck.org</code></span> (подставьте свой адрес).</li>
+    <li><strong>1.</strong> Minecraft <strong>1.21.1</strong> + Fabric Loader.</li>
+    <li><strong>2.</strong> Скачай ZIP и распакуй все jar в папку <strong>mods</strong>.</li>
+    <li><strong>3.</strong> Запусти игру и зайди на сервер.</li>
   </ol>
 
-  <div class="section-title">Обязательно (ядро сборки)</div>
-  <div class="mod-list">
-
-    <div class="mod-card">
-      <div class="mod-icon">📦</div>
-      <div class="mod-info">
-        <div class="mod-name">Fabric API</div>
-        <div class="mod-desc">Базовый API Fabric. Без него сборка не запустится.</div>
-        <div class="mod-meta">
-          <span class="tag mc">1.21.1</span>
-          <span class="tag loader">Fabric</span>
-          <span class="tag req">Обязателен</span>
-        </div>
-      </div>
-      <a class="download-btn" href="https://modrinth.com/mod/fabric-api/versions?g=1.21.1&l=fabric" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Modrinth
-      </a>
-    </div>
-
-    <div class="mod-card">
-      <div class="mod-icon">⭐</div>
-      <div class="mod-info">
-        <div class="mod-name">Seven Stars API</div>
-        <div class="mod-desc">Зависимость Middle-earth (версия как у ME, напр. 1.5.3-1.21.1-alpha).</div>
-        <div class="mod-meta">
-          <span class="tag mc">1.21.1</span>
-          <span class="tag loader">Fabric</span>
-          <span class="tag req">Обязателен</span>
-        </div>
-      </div>
-      <a class="download-btn" href="mods/SevenStarsAPI-1.5.3-1.21.1-alpha.jar" download>
-        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Скачать
-      </a>
-    </div>
-
-    <div class="mod-card">
-      <div class="mod-icon">🌍</div>
-      <div class="mod-info">
-        <div class="mod-name">Middle-earth</div>
-        <div class="mod-desc">Мир Средиземья. Та же alpha-сборка, что на сервере.</div>
-        <div class="mod-meta">
-          <span class="tag mc">1.21.1</span>
-          <span class="tag loader">Fabric</span>
-          <span class="tag req">Обязателен</span>
-        </div>
-      </div>
-      <a class="download-btn" href="mods/Middle-earth-1.5.3-1.21.1-alpha.jar" download>
-        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Скачать
-      </a>
-    </div>
-
-    <div class="mod-card">
-      <div class="mod-icon">⚔️</div>
-      <div class="mod-info">
-        <div class="mod-name">TME Alpha (модули)</div>
-        <div class="mod-desc">Core, Player, Towns, Traders, World, Equipment, Skills — как на сервере (без War на тесте).</div>
-        <div class="mod-meta">
-          <span class="tag mc">1.21.1</span>
-          <span class="tag loader">Fabric</span>
-          <span class="tag req">Обязателен</span>
-        </div>
-      </div>
-      <a class="download-btn" href="packs/TME-Alpha-Modules.zip" download>
-        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        ZIP модулей
-      </a>
-    </div>
-
-  </div>
-
-  <div class="section-title">Опционально (только клиент)</div>
-  <div class="mod-list">
-
-    <div class="mod-card">
-      <div class="mod-icon">✨</div>
-      <div class="mod-info">
-        <div class="mod-name">Sodium + Iris</div>
-        <div class="mod-desc">FPS и шейдеры. На сервер не ставить.</div>
-        <div class="mod-meta">
-          <span class="tag opt">Клиент</span>
-          <span class="tag loader">Fabric</span>
-        </div>
-      </div>
-      <a class="download-btn" href="https://modrinth.com/mod/sodium/versions?g=1.21.1&l=fabric" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Sodium
-      </a>
-    </div>
-
-    <div class="mod-card">
-      <div class="mod-icon">📋</div>
-      <div class="mod-info">
-        <div class="mod-name">EMI</div>
-        <div class="mod-desc">Просмотр рецептов и предметов.</div>
-        <div class="mod-meta">
-          <span class="tag opt">Клиент</span>
-        </div>
-      </div>
-      <a class="download-btn" href="https://modrinth.com/mod/emi/versions?g=1.21.1&l=fabric" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Modrinth
-      </a>
-    </div>
-
-    <div class="mod-card">
-      <div class="mod-icon">🌄</div>
-      <div class="mod-info">
-        <div class="mod-name">Distant Horizons</div>
-        <div class="mod-desc">Дальний ландшафт. Только клиент.</div>
-        <div class="mod-meta">
-          <span class="tag opt">Клиент</span>
-        </div>
-      </div>
-      <a class="download-btn" href="https://modrinth.com/mod/distanthorizons/versions?g=1.21.1&l=fabric" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Modrinth
-      </a>
-    </div>
-
+  <div class="section-title">Сервер</div>
+  <div class="server">
+    <div class="label">Адрес</div>
+    <code>144.76.61.107:32970</code>
   </div>
 
 </div>
 
-<footer>TME Project · Alpha · Fabric 1.21.1 · то же оформление, что у раздачи модов</footer>
+<footer>TME Project · Alpha · Fabric 1.21.1</footer>
 
 </body>
 </html>
