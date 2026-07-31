@@ -229,6 +229,59 @@
       display: inline-block;
     }
 
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    details.faq-item {
+      background: #15120e;
+      border: 1px solid #221712;
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+
+    details.faq-item[open] {
+      border-color: #3a3228;
+    }
+
+    details.faq-item summary {
+      color: #b89a50;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    details.faq-item summary::-webkit-details-marker { display: none; }
+
+    details.faq-item summary::before {
+      content: "+";
+      display: inline-block;
+      width: 1.2em;
+      color: #72635a;
+    }
+
+    details.faq-item[open] summary::before { content: "–"; }
+
+    details.faq-item .faq-body {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #72635a;
+    }
+
+    details.faq-item .faq-body strong { color: #b0a48a; }
+    details.faq-item .faq-body code {
+      color: #e8d5a3;
+      background: #1f1813;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -293,7 +346,7 @@
       <div class="pack-info">
         <div class="pack-name">2. TME модули</div>
         <div class="pack-desc">
-          Core, Player, Towns, Traders, World, Equipment, Skills, CNPC —
+          Core, Player, Towns, Traders, World, Equipment, Skills —
           тот же набор, что на сервере.
         </div>
         <div class="pack-meta">
@@ -340,6 +393,90 @@
   <div class="server">
     <div class="label">Адрес</div>
     <code>144.76.61.107:32970</code>
+  </div>
+
+  <div class="section-title">FAQ</div>
+  <div class="faq">
+
+    <details class="faq-item">
+      <summary>Какие моды обязательны / только клиент?</summary>
+      <div class="faq-body">
+        <strong>Обязательно:</strong> архивы «Ядро» + «TME модули».<br>
+        <strong>Только клиент:</strong> Sodium, Iris, Cloth Config, EMI, Distant Horizons, TL Skin Cape.<br>
+        На сервер <strong>не ставить</strong> клиентские моды. EasyAuth — только на сервере.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Ошибка: TME Skills requires cloth-config2</summary>
+      <div class="faq-body">
+        Поставь <strong>Cloth Config 15.x</strong> для Fabric 1.21.1 (Modrinth).
+        Он обычно закрывает и <code>cloth-config</code>, и <code>cloth-config2</code>.
+        Есть в опциональном клиентском архиве.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Ломаю блоки — предметы не выпадают</summary>
+      <div class="faq-body">
+        Часто это <strong>TME Skills</strong>: кирка/руда требуют скилл <strong>mining</strong>
+        (деревянная кирка — минимум 1). Блок ломается, дроп отменяется, пока скилл низкий.<br>
+        Вкачай mining в меню скиллов (шахтёр может качать mining / constitution).
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Как открыть меню аддона?</summary>
+      <div class="faq-body">
+        Клавиша <strong>U</strong> или <code>/tme menu</code>.
+        Оттуда: профессии, братство, карта, атлас и т.д.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Братства — что это?</summary>
+      <div class="faq-body">
+        Безземельный союз игроков (независимо от города). Ранги: Лидер / Офицер / Брат.
+        Лидер может включить <strong>мирный режим</strong> (non-PvP между членами).<br>
+        Команды: <code>/tme brotherhood</code> или <code>/братство</code>
+        (<code>create</code>, <code>invite</code>, <code>accept</code>, <code>peaceful</code>…).
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Сколько стоит личная лошадь?</summary>
+      <div class="faq-body">
+        Выдача (OP): бесплатно · призыв: бесплатно ·
+        воскрешение <code>/tme mount revive</code>: <strong>32</strong> монеты ·
+        конюшня <code>/tme mount stable</code>: <strong>2</strong> монеты.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Вход / регистрация на сервере</summary>
+      <div class="faq-body">
+        Стоит <strong>EasyAuth</strong> (offline-mode). После входа зарегистрируйся / залогинься
+        командами мода (обычно <code>/register</code>, <code>/login</code> — смотри подсказки в чате).
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Сервер крашится при исследовании мира</summary>
+      <div class="faq-body">
+        Часто баг генерации <strong>Middle-earth alpha</strong> (структуры / spawn в чанке).
+        Не летай далеко в «сырые» зоны; телепортируйся ближе к хабу.
+        Это не TME-аддоны.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Обновление одного мода</summary>
+      <div class="faq-body">
+        Моды на Google Drive по архивам. Обновили, например, TME-Player —
+        перезалей только архив «модули», у себя замени jar в <code>mods</code>.
+      </div>
+    </details>
+
   </div>
 
 </div>
